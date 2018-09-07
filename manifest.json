@@ -1,0 +1,35 @@
+{
+    "name": "Synonym",
+    "version": "2.1",
+    "description": "Select a word and get synonyms and antonyms.  Brought to you by Synonym.com",
+    "permissions": ["activeTab", "contextMenus", "storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/synonym_logo16.png",
+        "32": "images/synonym_logo32.png",
+        "48": "images/synonym_logo48.png",
+        "128": "images/synonym_logo128.png"
+      }
+    },
+    "icons": {
+      "16": "images/synonym_logo16.png",
+      "32": "images/synonym_logo32.png",
+      "48": "images/synonym_logo48.png",
+      "128": "images/synonym_logo128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "css": ["content.css"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": ["images/synonym_logo.png"],
+    "manifest_version": 2
+  }
+  
